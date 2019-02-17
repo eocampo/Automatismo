@@ -6,7 +6,7 @@ WiFiAutoSelector wifiAutoSelector(WIFI_CONNECT_TIMEOUT);
 void setup() {
    Serial.begin(9600);
    wifiAutoSelector.add("DirectoMX", "qwerty1979");
-   wifiAutoSelector.add("Invitados", "1234554321");
+   wifiAutoSelector.add("Invitados", "rodrigo79");
  }
 
  void loop() {
