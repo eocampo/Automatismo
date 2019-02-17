@@ -2,7 +2,7 @@
 // to make a perfect WIFI connection from the NodeMCU v3
 // Using WiFiAutoSelector.h from Andreas Schaefer to determine which Wifi Network has better Signal
 // If connection fails, loop keeps trying for the next avaliable WiFi Network (they must be listed)
-// Library to use
+// Library to use 
 #include <ESP8266WiFi.h>
 #include "WiFiAutoSelector.h"
 // Timeout for the WiFi connection
