@@ -1,2 +1,2 @@
 # Automatismo
-Todo el proyecto de Casa Automatizada
+Todo el proyecto de Casa Automatizada README
