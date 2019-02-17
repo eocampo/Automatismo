@@ -1,4 +1,9 @@
-void setuo() {
+#include <ESP8266WiFi.h>
+#include "WiFiAutoSelector.h"
+
+#define WIFI_CONNECT_TIMEOUT 8000
+WiFiAutoSelector wifiAutoSelector(WIFI_CONNECT_TIMEOUT);
+void setup() {
    Serial.begin(9600);
    wifiAutoSelector.add("DirectoMX", "qwerty1979");
    wifiAutoSelector.add("Invitados", "1234554321");
