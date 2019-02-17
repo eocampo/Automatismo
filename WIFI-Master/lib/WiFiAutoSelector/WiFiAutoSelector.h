@@ -15,35 +15,6 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
  *
- * Usage example:
- *
- * #include <ESP8266WiFi.h>
- * #include "WiFiAutoSelector.h"
- *
- * #define WIFI_CONNECT_TIMEOUT 8000
- * WiFiAutoSelector wifiAutoSelector(WIFI_CONNECT_TIMEOUT);
- *
- * void setuo() {
- *   Serial.begin(9600);
- *   wifiAutoSelector.add("myApOne", "s4crzt");
- *   wifiAutoSelector.add("anotherApTwo", "moreSecret");
- * }
- *
- * void loop() {
- *   if(WiFi.status() != WL_CONNECTED) {
- *     Serial.print("Connecting wifi ");
- *     if(-1 < wifiAutoSelector.scanAndConnect()) {
- *       int connectedIndex = wifiAutoSelector.getConnectedIndex();
- *       Serial.print("to '");
- *       Serial.print(wifiAutoSelector.getSSID(connectedIndex));
- *       Serial.println("'. Done.");
- *     }else{
- *       Serial.println("failed.");
- *     }
- *   }
- *   delay(1000);
- * }
- *
  */
 class WiFiAutoSelector {
 private:
