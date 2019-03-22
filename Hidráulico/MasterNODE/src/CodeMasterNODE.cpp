@@ -18,10 +18,12 @@ BlynkTimer timer;
 // that you define how often to send data to Blynk App.
 void myTimerEvent()
 {
+  if (distanceCM!=0){
   // You can send any value at any time.
   Blynk.virtualWrite(V5, distanceCM);
   Serial.print("Distancia: ");
   Serial.println(distanceCM);
+  }
 }
 
 void setup() {
@@ -52,7 +54,7 @@ durationMS = pulseIn(echoPin, HIGH);
 // Calculating the distance
 distanceCM = (((int) durationMS * 0.034) / 2);
 // Pause between soundings at least60 ms
-delay(1000);
+delay(2000);
 // End of Main Loop
 Blynk.run();
 timer.run();
