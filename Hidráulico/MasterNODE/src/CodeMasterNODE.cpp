@@ -18,7 +18,7 @@ BlynkTimer timer;
 // that you define how often to send data to Blynk App.
 void myTimerEvent()
 {
-  if (distanceCM!=0){
+  if (distanceCM>30){
   // You can send any value at any time.
   Blynk.virtualWrite(V5, distanceCM);
   Serial.print("Distancia: ");
